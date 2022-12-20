@@ -1,0 +1,30 @@
+.header {
+  width: 100%;
+  height: 120px;
+  box-sizing: border-box;
+  border: 1px solid red;
+  background-color: white;
+}
+
+.center-box {
+  margin: 0 auto;
+  max-width: 1220px;
+  height: 100%;
+  /* background: #000; */
+}
+
+.logo {
+  float: left;
+  width: 380px;
+  height: 100%;
+  background: no-repeat left center url('../../public/images/LOGO.png');
+  background-size: contain;
+}
+
+.figure {
+  float: right;
+  width: 390px;
+  height: 100%;
+  background: no-repeat right url('../../public/images/header_bg.png');
+  background-size: contain;
+}
