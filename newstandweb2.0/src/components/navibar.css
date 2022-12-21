@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navibar {
+  width: 100%;
+  height: 40px;
+  background-color: #CD2E1C;
+}
+
+.options {
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+.option {
+  list-style: none;
+  float: left;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  background: transparent;
+  -webkit-user-select: none;
+}
+
+.selected-option {
+  background: #C11C0A;
+}
+
+.option:hover {
+  background-color: #C11C0A;
+  cursor: pointer;
+}

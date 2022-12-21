@@ -1,33 +1,24 @@
 import './content.css'
-import { useState } from 'react';
-import { Menu } from 'antd';
-
-
-
+import Navibar from './Navibar'
+import { useState } from 'react'
 
 const items = [
-  {
-    label: 'Navigation One',
-    key: 'mail',
-  },
-  {
-    label: 'Navigation Two',
-    key: 'app',
-  }
+  '经济学人',
+  '国家地理',
+  '科学'
 ]
 
+
+
 const MainContent = () => {
-  const [current, setCurrent] = useState('mail');
-  const onClick = (e) => {
-    console.log('click ', e);
-    setCurrent(e.key);
-  };
+  const [type, setType] = useState('TE')
+
 
   return (
     <div>
-      <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+      <Navibar items={items} clickHandler={setType} />
       <div className="content">
-
+        {type}
       </div>
     </div>
 

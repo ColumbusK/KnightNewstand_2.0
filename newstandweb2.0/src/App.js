@@ -6,7 +6,6 @@ import HeaderCenter from './components/HeaderCenter';
 import MainContent from './components/MainContent';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import 'antd/dist';
 import './index.css';
 
 moment.locale('zh-cn');
