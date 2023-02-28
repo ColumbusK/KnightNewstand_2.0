@@ -1,0 +1,41 @@
+.sponsor-pig:hover {
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.sponsor-pig {
+  position: fixed;
+  /*固定位置*/
+  z-index: 99;
+  /*设置优先级显示，保证不会被覆盖*/
+  right: 20px;
+  bottom: 40px;
+  width: 100px;
+  height: 100px;
+  background: no-repeat center center url('../../public/images/pig.png');
+  background-size: contain;
+  transform: rotateY(180deg);
+  transition: all .5s linear;
+
+}
+
+.sponsor-title {
+  margin-right: 10px;
+  margin-top: 50px;
+  font-weight: 700;
+  color: #5D6783;
+  transform: rotateY(180deg);
+}
+
+
+.qrcode {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+}
+
+p {
+  text-align: center;
+}

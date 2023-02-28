@@ -3,7 +3,7 @@
   min-width: 900px;
   height: 120px;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-color: white;
 }
 
@@ -18,8 +18,9 @@
   float: left;
   width: 380px;
   height: 100%;
-  background: no-repeat left center url('../../public/images/LOGO.png');
+  background: no-repeat left center url('../../public/images/logo4.png');
   background-size: contain;
+  cursor: pointer;
 }
 
 .figure {

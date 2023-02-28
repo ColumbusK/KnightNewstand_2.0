@@ -2,5 +2,9 @@
   margin: 0 auto;
   max-width: 1220px;
   min-height: 500px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.main-content {
+  position: relative;
 }

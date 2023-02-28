@@ -7,21 +7,17 @@ import MainContent from './components/MainContent';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import './index.css';
+import 'antd/dist/antd.css';
 
-moment.locale('zh-cn');
-const { Header, Footer, Content } = Layout;
+moment.locale('zh-cn')
 
 function App() {
   return (
     <div className="App">
       <Layout className='layout'>
-        <Header>
-          <HeaderCenter />
-        </Header>
-        <Content>
-          <MainContent />
-        </Content>
-        <Footer></Footer>
+        <HeaderCenter />
+        <MainContent />
+
       </Layout>
     </div>
   );
