@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+.Link {
+  text-decoration: none;
+  color: white;
+}
+
 .navibar {
   width: 100%;
   height: 40px;
