@@ -15,10 +15,8 @@ import magzineItems from '../services/magzineInfo'
 
 import { fetchData } from '../services/magzines';
 
-import { QuestionCircleOutlined, AliwangwangOutlined, CloudUploadOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined, AliwangwangOutlined, CloudUploadOutlined, QqOutlined, AndroidOutlined } from '@ant-design/icons';
 import { FloatButton } from 'antd';
-
-
 
 
 const MainContent = () => {
@@ -28,7 +26,7 @@ const MainContent = () => {
   const [current, setCurrent] = useState(1)
   const [rows, setRows] = useState(3)
   const [displayData, setDisplayData] = useState(data.slice((current - 1) * rows, current * rows))
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetchMagzines(idx)
@@ -53,6 +51,10 @@ const MainContent = () => {
     navigate('/translator')
   }
 
+  const handleAiLawClick = () => {
+    window.open('http://ai4law.wswpass.com/')
+  }
+
   return (
     <div className="main-content">
       <Navibar items={magzineItems} clickHandler={setIdx} />
@@ -75,11 +77,12 @@ const MainContent = () => {
           right: 24,
         }}
       >
-        <FloatButton onClick={handleTranslatorClick} type='primary' icon={<AliwangwangOutlined />} tooltip={<div>翻译学习机(doing)</div>} />
-        <FloatButton type='primary' visibilityHeight={0} icon={<CloudUploadOutlined />} tooltip={<div>杂志上传(to do)</div>} />
-        <FloatButton icon={<QuestionCircleOutlined />} />
+        <FloatButton onClick={handleTranslatorClick} type='primary' icon={<AliwangwangOutlined />} tooltip={<div>翻译学习机（Doing）</div>} />
+        <FloatButton onClick={handleAiLawClick} type='primary' icon={<AndroidOutlined />} tooltip={<div>法律咨询机器人</div>} />
+        <FloatButton type='primary' icon={<CloudUploadOutlined />} tooltip={<div>杂志上传（To do）</div>} />
+        <FloatButton type='primary' icon={<QqOutlined />} tooltip={<div>QQ讨论群（To do）</div>} />
+        <FloatButton icon={<QuestionCircleOutlined />} tooltip={<div>反馈&建议：zkzkao@foxmail.com</div>} />
       </FloatButton.Group>
-
     </div>
 
   )
