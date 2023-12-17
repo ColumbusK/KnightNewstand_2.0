@@ -34,11 +34,15 @@ const MainContent = () => {
 
   // get magzine data
   const fetchMagzines = async (idx) => {
-    const data = await fetchData(idx)
-    setData(data)
-    setLength(data.length)
-    setCurrent(1)
-    setDisplayData(data.slice((1 - 1) * rows, 1 * rows))
+    try {
+      const data = await fetchData(idx)
+      setData(data)
+      setLength(data.length)
+      setCurrent(1)
+      setDisplayData(data.slice((1 - 1) * rows, 1 * rows))
+    } catch (e) {
+      setData([])
+    }
   }
 
   const onChange = (page) => {
@@ -77,8 +81,6 @@ const MainContent = () => {
           right: 24,
         }}
       >
-        <FloatButton onClick={handleTranslatorClick} type='primary' icon={<AliwangwangOutlined />} tooltip={<div>翻译学习机（Doing）</div>} />
-        <FloatButton onClick={handleAiLawClick} type='primary' icon={<AndroidOutlined />} tooltip={<div>法律咨询机器人</div>} />
         <FloatButton type='primary' icon={<CloudUploadOutlined />} tooltip={<div>杂志上传（To do）</div>} />
         <FloatButton type='primary' icon={<QqOutlined />} tooltip={<div>QQ讨论群（To do）</div>} />
         <FloatButton icon={<QuestionCircleOutlined />} tooltip={<div>反馈&建议：zkzkao@foxmail.com</div>} />

@@ -10,6 +10,7 @@ import './index.css';
 import 'antd/dist/reset.css';
 import { Route, Routes } from 'react-router-dom';
 import Translator from './components/Translator';
+import Upload from './components/Upload';
 
 moment.locale('zh-cn')
 
@@ -20,6 +21,7 @@ function App() {
         <HeaderCenter />
         <Routes>
           <Route path='/translator' element={<Translator />} />
+          <Route path='/upload' element={<Upload />} />
           <Route path='*' element={<MainContent />} />
           <Route path='*' element={<div>404</div>} />
         </Routes>
