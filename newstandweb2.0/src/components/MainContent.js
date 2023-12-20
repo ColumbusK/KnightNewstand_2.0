@@ -16,7 +16,9 @@ import magzineItems from '../services/magzineInfo'
 import { fetchData } from '../services/magzines';
 
 import { QuestionCircleOutlined, AliwangwangOutlined, CloudUploadOutlined, QqOutlined, AndroidOutlined } from '@ant-design/icons';
-import { FloatButton } from 'antd';
+import { FloatButton, Modal } from 'antd';
+
+
 
 
 const MainContent = () => {
@@ -26,7 +28,29 @@ const MainContent = () => {
   const [current, setCurrent] = useState(1)
   const [rows, setRows] = useState(3)
   const [displayData, setDisplayData] = useState(data.slice((current - 1) * rows, current * rows))
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate()
+
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const GroupModal = () => {
+    return (
+      <Modal title="QQ讨论群" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} closable>
+        <img src='./images/qun.png' alt='QQ讨论群' className='qrcode' />
+        <p>打开QQ扫一扫</p>
+      </Modal>
+    )
+  }
 
   useEffect(() => {
     fetchMagzines(idx)
@@ -82,9 +106,11 @@ const MainContent = () => {
         }}
       >
         <FloatButton type='primary' icon={<CloudUploadOutlined />} tooltip={<div>杂志上传（To do）</div>} />
-        <FloatButton type='primary' icon={<QqOutlined />} tooltip={<div>QQ讨论群（To do）</div>} />
+        <FloatButton type='primary' icon={<QqOutlined />} tooltip={<div>QQ讨论群</div>} onClick={showModal} />
         <FloatButton icon={<QuestionCircleOutlined />} tooltip={<div>反馈&建议：zkzkao@foxmail.com</div>} />
       </FloatButton.Group>
+
+      <GroupModal />
     </div>
 
   )

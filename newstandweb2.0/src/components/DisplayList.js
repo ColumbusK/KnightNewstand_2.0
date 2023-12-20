@@ -51,13 +51,13 @@ const MagzineCard = ({ img, title, url }) => {
         <div className='magzine-title'>{title}</div>
       </div>
 
-      <Modal title="❤感谢支持❤" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} closable={true} closeIco okText="已经支持"
+      <Modal title="❤感谢支持❤" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} closable={true} closeIcon okText="已经支持" cancelText="就爱白嫖" okType='default' cancelButtonProps={{ danger: true }}
         maskClosable={false}>
         <p>小伙伴的支持是让项目持续更新的最大动力，感谢大家❀ </p>
         <p>
-          <HeartIcon /> 好好学习，天天向上。坚持不懈，顺利上岸 <HeartIcon />
+          <HeartIcon /> 个人精力有限，往期资源意外丢失，持续迭代中 <HeartIcon />
         </p>
-        <p><strong>注意:</strong> 使用VPN资源加载速度更快</p>
+        <p><strong>注意:</strong>浏览器建议使用Edge/Chrome</p>
         <img src='./images/QRCode1.jpg' alt='赞赏码' className='qrcode' />
         <p>打开微信扫一扫进行赞赏</p>
       </Modal>
