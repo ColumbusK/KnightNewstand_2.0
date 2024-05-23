@@ -9,7 +9,6 @@ import { FloatButton, notification } from 'antd';
 import translate from '../services/translator';
 
 const { Header, Content, Footer } = Layout
-const { TextArea } = Input
 
 
 const Translator = () => {

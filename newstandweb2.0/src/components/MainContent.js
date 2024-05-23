@@ -15,7 +15,7 @@ import magzineItems from '../services/magzineInfo'
 
 import { fetchData } from '../services/magzines';
 
-import { QuestionCircleOutlined, AliwangwangOutlined, CloudUploadOutlined, QqOutlined, AndroidOutlined } from '@ant-design/icons';
+import { QuestionCircleOutlined, CloudUploadOutlined, QqOutlined } from '@ant-design/icons';
 import { FloatButton, Modal } from 'antd';
 
 

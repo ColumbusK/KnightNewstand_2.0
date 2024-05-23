@@ -1,7 +1,9 @@
 import './displayList.css'
 import { Modal } from 'antd'
 import { useState } from 'react'
+import { CloseOutlined } from '@ant-design/icons';
 import Icon from '@ant-design/icons'
+
 
 
 import './sponsor.css'
@@ -51,8 +53,8 @@ const MagzineCard = ({ img, title, url }) => {
         <div className='magzine-title'>{title}</div>
       </div>
 
-      <Modal title="❤感谢支持❤" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} closable={true} closeIcon okText="已经支持" cancelText="就爱白嫖" okType='default' cancelButtonProps={{ danger: true }}
-        maskClosable={false}>
+      <Modal title="❤感谢支持❤" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} closable={true} closeIcon={<CloseOutlined />} okText="已经物质支持" cancelText="已经精神支持" okButtonProps={{ danger: true }} cancelButtonProps={{ danger: true, onClick: handleOk }}
+        maskClosable>
         <p>小伙伴的支持是让项目持续更新的最大动力，感谢大家❀ </p>
         <p>
           <HeartIcon /> 个人精力有限，往期资源意外丢失，持续迭代中 <HeartIcon />
